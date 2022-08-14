@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.grid{
+    height: 450px;
+    width: 450px;
+    /* border: 2px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    display : flex;
+    text-align: center;
+    /* background-color: blue; */
+    justify-content : center;
+    align-items :center;
+    color : #ffff;
+    font-size: 20px;
+    box-shadow: 0px 0px 10px 10px #b7b7b7;
+}
+.box{
+    height: 50px;
+    width: 50px;
+    /* background-color: white; */
+    /* border-radius: 1000px; */
+    border: 2px solid white;
+    transition: border 0.1s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 10px; */
+    background-color: #dddddd;
+}
+.box:hover{
+    cursor:pointer;
+    border: 3px solid gold;
+    
+    
+    /* border-radius: 10px; */
+}
+.container{
+    height: 100vh;
+    width : 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f7;
+}
+.openBox{
+    height: 0px;
+    width: 0px;
+    background-color: aliceblue;
+    /* position: absolute; */
+}
+.openBoxScale{
+    height: 210px;
+    width: 210px;
+    background-color: white;
+    transition: all 100ms ease-in-out;
+    /*note: not transitioning width */
+    transition-property: height,width;
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    /* overflow: none; */
+}
+.num{
+    height: 33.33%;
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    color: rgb(16, 14, 14);
+    background-color: rgb(228, 228, 228);
+    /* font-weight: bold; */
+    font-size: larger;
+    align-items: center;
+    /* background-color: aqua; */
+    border: 3px solid white;
+    border-radius: 10px;
+    transition: border 0.3s;
+}
+.num:hover{
+    border-color: gold;
+}
+.dataDiv{
+    /* height: 5px;
+    width: 5px; */
+    color:rgb(41, 39, 39);
+    font-size: larger;
+    font-weight: bold;
+    position: absolute;
+    /* background-color: white; */
+}
+.dataDiv2{
+    /* height: 5px;
+    width: 5px; */
+    color:rgb(255, 1, 1);
+    
+}
+.button{
+    margin-top: 50px;
+    height: 50px;
+    width: 150px;
+    border: 1px solid rgb(67, 243, 67);
+    font-size: 24px;
+    color : rgb(67, 243, 67);
+    background-color: #f3f3f7;
+    /* border-radius: 10px; */
+    transition: all 0.3s;
+    
+}
+.button:hover{
+    cursor: pointer;
+    box-shadow: 0px 2px 2px 0px rgb(67, 243, 67);
+}
+.button:active{
+    box-shadow: 0px 0px 0px 0px rgb(67, 243, 67);
+}
