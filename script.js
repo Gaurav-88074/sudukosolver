@@ -51,7 +51,20 @@ const getDiv =(i,j) => {
     res.appendChild(getDataDiv());
     return res;
 }
-
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+const execute = async (matrix)=>{
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if(document.getElementById(`${i}${j}`).children[1].textContent=='.'){
+                document.getElementById(`${i}${j}`).children[1].classList.add("dataDiv2")
+            }
+            document.getElementById(`${i}${j}`).children[1].textContent = matrix[i][j];
+            await sleep(10);
+        }
+    }
+}
 window.onload=function(){
     // console.log(getDiv());
     var container = document.querySelector('.bro') ;
@@ -74,16 +87,9 @@ window.onload=function(){
             }
         }
         solveSudoku(matrix);
+        execute(matrix)
         // console.log(matrix);
-        for (let i = 0; i < 9; i++) {
-            for (let j = 0; j < 9; j++) {
-                // console.log(matrix[i]);
-                if(document.getElementById(`${i}${j}`).children[1].textContent=='.'){
-                    document.getElementById(`${i}${j}`).children[1].classList.add("dataDiv2")
-                }
-                document.getElementById(`${i}${j}`).children[1].textContent = matrix[i][j];
-            }
-        }
+        
     })
 }
 

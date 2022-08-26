@@ -58,9 +58,9 @@
     height: 210px;
     width: 210px;
     background-color: white;
-    transition: all 100ms ease-in-out;
+    transition: all 200ms ease-in-out;
     /*note: not transitioning width */
-    transition-property: height,width;
+    transition-property: height,width,font;
     z-index: 10;
     position: absolute;
     display: flex;
@@ -99,6 +99,7 @@
     /* height: 5px;
     width: 5px; */
     color:rgb(255, 1, 1);
+    color:rgb(78, 78, 255);
     
 }
 .button{
